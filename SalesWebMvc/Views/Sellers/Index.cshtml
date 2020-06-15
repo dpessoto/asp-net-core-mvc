@@ -11,10 +11,10 @@
 <table class="table table-striped table-hover">
     <thead>
         <tr class="success">
-            <th>Nome</th>
-            <th>E-mail</th>
-            <th>Data de nascimento</th>
-            <th>Salário</th>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>@Html.DisplayNameFor(model => model.BirthDate)</th>
+            <th>@Html.DisplayNameFor(model => model.BaseSalary)</th>
             <th></th>
         </tr>
     </thead>
@@ -25,7 +25,7 @@
                 <td> @Html.DisplayFor(modelItem => item.Name) </td>
                 <td> @Html.DisplayFor(modelItem => item.Email) </td>
                 <td> @Html.DisplayFor(modelItem => item.BirthDate) </td>
-                <td> @Html.DisplayFor(modelItem => item.BaseSalary) </td>
+                <td> R$ @Html.DisplayFor(modelItem => item.BaseSalary) </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
                     <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
